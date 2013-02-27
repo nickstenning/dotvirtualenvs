@@ -1,7 +1,10 @@
 #!/bin/zsh
 # This hook is run after a new virtualenv is activated.
 
-if [ -e /usr/local/lib/python2.7/site-packages/IPython ]; then
-  ln -s /usr/local/lib/python2.7/site-packages/IPython "${VIRTUAL_ENV}/lib/python2.7/site-packages"
-  ln -s /usr/local/lib/python2.7/site-packages/ipython-*.egg-info "${VIRTUAL_ENV}/lib/python2.7/site-packages"
+PYVER=$(python -c "import sys; print '{0}.{1}'.format(sys.version_info[0], sys.version_info[1])")
+PREFIX=$(brew --prefix)
+
+if [ -e "$PREFIX"/lib/python2.7/site-packages/IPython ]; then
+  ln -s "$PREFIX"/lib/python2.7/site-packages/IPython "${VIRTUAL_ENV}/lib/python2.7/site-packages"
+  ln -s "$PREFIX"/lib/python2.7/site-packages/ipython-*.egg-info "${VIRTUAL_ENV}/lib/python2.7/site-packages"
 fi
