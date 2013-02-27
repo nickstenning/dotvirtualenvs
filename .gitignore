@@ -1,0 +1,6 @@
+*
+!.gitignore
+!get_env_details
+!initialize
+!post*
+!pre*
