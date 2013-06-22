@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 # This hook is run after every virtualenv is deactivated.
 
 STATIC_RPROMPT="$_OLD_STATIC_RPROMPT"

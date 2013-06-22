@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 # This hook is run after a new virtualenv is activated.
 
 PYVER=$(python -c "import sys; print '{0}.{1}'.format(sys.version_info[0], sys.version_info[1])")
